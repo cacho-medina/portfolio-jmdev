@@ -7,6 +7,7 @@ import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import { AppleStyleDock } from '@/components/ui/dock/demo';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <ExperienceSection />
       <ContactSection />
       <Footer />
+      <AppleStyleDock />
     </div>
   );
 };
