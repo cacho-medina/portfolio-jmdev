@@ -1,0 +1,75 @@
+
+import { useEffect, useRef } from 'react';
+
+const AboutSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+  
+  return (
+    <section id="about" className="py-20 md:py-28 relative overflow-hidden" ref={sectionRef}>
+      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full filter blur-[80px]" />
+      
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          {/* Image with glow effect */}
+          <div className="w-48 h-48 md:w-64 md:h-64 relative opacity-0 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent animate-float" />
+            <div className="absolute inset-2 rounded-full glass-morph glow-effect overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80" 
+                alt="Joaquín Medina" 
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+          </div>
+          
+          {/* About Content */}
+          <div className="max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <h2 className="font-radio text-3xl md:text-4xl font-bold mb-6 text-gradient tracking-tight">About Me</h2>
+            
+            <div className="space-y-4 text-white/80">
+              <p>
+                I'm a passionate Fullstack Web Developer with a strong focus on creating beautiful, 
+                performant web applications. With 5+ years of experience in both frontend and backend 
+                development, I enjoy tackling complex problems and turning ideas into reality.
+              </p>
+              
+              <p>
+                My journey began with a deep curiosity for how things work on the web. Today, I specialize 
+                in React, Node.js, and various modern frameworks to deliver scalable solutions. I'm always 
+                exploring new technologies and approaches to stay at the forefront of web development.
+              </p>
+              
+              <p>
+                When I'm not coding, you'll find me contributing to open source projects, participating 
+                in tech communities, or sharing my knowledge through mentorship and writing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
