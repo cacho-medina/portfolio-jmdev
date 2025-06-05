@@ -66,11 +66,14 @@ const HeroSection = () => {
                         <Button
                             size="lg"
                             variant="special"
-                            className="glass-morph hover:glow-effect border-special-red/20 hover:border-special-red/40 transition-all duration-300 text-white/90 hover:text-white px-8"
+                            className="glass-morph group hover:glow-effect border-special-red/20 hover:border-special-red/40 transition-all duration-300 text-white/90 hover:text-white px-8"
                         >
-                            <a href="#projects" className="flex items-center">
+                            <a
+                                href="#projects"
+                                className="flex items-center h-full"
+                            >
                                 See My Projects
-                                <ArrowRight className="ml-2 h-4 w-4" />
+                                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                             </a>
                         </Button>
                         <Button

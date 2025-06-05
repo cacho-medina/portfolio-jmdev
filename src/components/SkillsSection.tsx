@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { TechSlider } from "./custom/TechSlider";
 
 const skillsData = {
     Frontend: [
@@ -69,7 +70,7 @@ const SkillsSection = () => {
         <section id="skills" className="py-20 md:py-28 relative">
             <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-special-red/5 rounded-full filter blur-[80px]" />
 
-            <div className="container px-4 md:px-6 mx-auto" ref={sectionRef}>
+            <div className="px-4 md:px-6" ref={sectionRef}>
                 <div className="text-center mb-12 opacity-0 animate-fade-in">
                     <h2 className="font-radio text-3xl md:text-4xl font-bold text-gradient tracking-tight">
                         Technical Skills
@@ -80,6 +81,10 @@ const SkillsSection = () => {
                     </p>
                 </div>
 
+                <div className="mb-12">
+                    <TechSlider />
+                </div>
+                {/* 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
                     {Object.entries(skillsData).map(
                         ([category, skills], catIndex) => (
@@ -113,7 +118,7 @@ const SkillsSection = () => {
                             </div>
                         )
                     )}
-                </div>
+                </div> */}
             </div>
         </section>
     );

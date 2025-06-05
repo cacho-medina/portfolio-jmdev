@@ -104,6 +104,14 @@ export default {
                     "0%, 100%": { transform: "translateY(0)" },
                     "50%": { transform: "translateY(-10px)" },
                 },
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                },
+                "marquee-vertical": {
+                    from: { transform: "translateY(0)" },
+                    to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +120,9 @@ export default {
                 "scale-in": "scale-in 0.3s ease-out forwards",
                 "slide-in-bottom": "slide-in-bottom 0.5s ease-out forwards",
                 float: "float 6s ease-in-out infinite",
+                marquee: "marquee var(--duration) infinite linear",
+                "marquee-vertical":
+                    "marquee-vertical var(--duration) linear infinite",
             },
         },
     },
