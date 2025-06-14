@@ -48,7 +48,7 @@ const ContactSection = () => {
 
     return (
         <section id="contact" className="py-20 md:py-28 relative">
-            <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-blue-500/5 rounded-full filter blur-[100px]" />
+            <div className="absolute bottom-0 w-80 h-80 bg-special-red/5 rounded-full filter blur-[100px]" />
 
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="text-center mb-12">

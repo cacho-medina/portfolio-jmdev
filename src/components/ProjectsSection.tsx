@@ -3,7 +3,7 @@ import ProjectCard, { ProjectProps } from "./ProjectCard";
 
 const projectsData: ProjectProps[] = [
     {
-        title: "E-commerce Platform",
+        title: "LuxBuy E-commerce",
         description:
             "A fully responsive e-commerce platform with cart functionality, payment processing, and admin dashboard.",
         tech: ["React", "Node.js", "MongoDB", "Stripe"],
@@ -30,7 +30,25 @@ const projectsData: ProjectProps[] = [
         githubUrl: "https://github.com/joaquinmedina",
     },
     {
-        title: "Social Media Dashboard",
+        title: "Rolling Hotel",
+        description:
+            "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
+        tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        demoUrl: "https://social-metrics.demo.com",
+        githubUrl: "https://github.com/joaquinmedina",
+    },
+    {
+        title: "Management System",
+        description:
+            "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
+        tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        demoUrl: "https://social-metrics.demo.com",
+        githubUrl: "https://github.com/joaquinmedina",
+    },
+    {
+        title: "Koi ERP",
         description:
             "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
         tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],

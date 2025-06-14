@@ -2,6 +2,13 @@ import { useEffect, useRef } from "react";
 
 const experienceData = [
     {
+        role: "Backend Developer",
+        company: "Qik Starts",
+        period: "May 2025 - Present",
+        description:
+            "Developed backend services using Node.js, NestJS and MongoDB. Collaborated with backend & AI developers to implement communication services with AI and Whatsapp.",
+    },
+    {
         role: "Fullstack Developer",
         company: "Koi Studio",
         period: "April 2024 - Present",
@@ -9,16 +16,9 @@ const experienceData = [
             "Leading development of web applications using React, Node.js and PostgreSQL. Implementing CI/CD workflows and mentoring junior developers.",
     },
     {
-        role: "Frontend Developer",
-        company: "Tech Innovations",
-        period: "May 2022 - March 2024",
-        description:
-            "Developed responsive web applications using React, Redux and TypeScript. Collaborated with UX/UI designers to implement pixel-perfect interfaces.",
-    },
-    {
         role: "Web Developer",
-        company: "Digital Solutions",
-        period: "January 2021 - April 2022",
+        company: "Outlier",
+        period: "March 2025 - Present",
         description:
             "Built and maintained client websites and e-commerce platforms. Optimized site performance and implemented SEO best practices.",
     },
@@ -26,39 +26,46 @@ const experienceData = [
 
 const educationData = [
     {
-        title: "MERN Stack Development",
-        institution: "RollingCode",
-        period: "2023",
+        title: "Systems Engineering",
+        institution: "UTN (Universidad Tecnológica Nacional)",
+        period: "Present",
         description:
-            "Full-stack web development bootcamp focusing on MongoDB, Express, React, and Node.js.",
+            "Systems engineering degree with a focus on software development, system design, and project management.",
     },
     {
-        title: "Advanced JavaScript",
-        institution: "Globant Academy",
-        period: "2022",
+        title: "Tu Futuro: Soft Skills Program",
+        institution: "Forge Foundation",
+        period: "April 2025",
+        description:
+            "Soft skills program focused on communication, teamwork, leadership, and problem-solving.",
+    },
+    {
+        title: "Backend Development",
+        institution: "Vortex Academy",
+        period: "February 2025",
+        description:
+            "Backend development bootcamp focusing on Typescript, Node.js, NestJS, PostgreSQL and Prisma ORM.",
+    },
+    {
+        title: "QA Manual Testing",
+        institution: "CoderHouse",
+        period: "November 2024",
+        description:
+            "In-depth course on manual testing, use cases, test plans, reports, API testing and documentation.",
+    },
+    {
+        title: "Web UI Bootcamp",
+        institution: "Globant",
+        period: "September 2024",
         description:
             "Intensive course covering advanced JavaScript concepts, design patterns, and performance optimization.",
     },
     {
-        title: "Frontend Development",
-        institution: "Vortex Academy",
-        period: "2021",
+        title: "Fullstack Development (MERN Stack)",
+        institution: "RollingCode School",
+        period: "April 2024",
         description:
-            "Comprehensive training in modern frontend technologies and frameworks.",
-    },
-    {
-        title: "React & Redux",
-        institution: "CoderHouse",
-        period: "2020",
-        description:
-            "In-depth course on React ecosystem including state management with Redux.",
-    },
-    {
-        title: "Web Development",
-        institution: "UTN (Universidad Tecnológica Nacional)",
-        period: "2019-2020",
-        description:
-            "Certification program covering full-stack web development fundamentals.",
+            "Full-stack web development bootcamp focusing on MongoDB, Express, React, and Node.js.",
     },
 ];
 

@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -10,8 +9,7 @@ import { CircleShadow } from "@/components/CircleShadow";
 
 const Index = () => {
     return (
-        <div className="min-h-screen overflow-x-hidden">
-            <Navbar />
+        <>
             <HeroSection />
             <AboutSection />
             <div className="mb-8">
@@ -22,7 +20,7 @@ const Index = () => {
             <ExperienceSection />
             <ContactSection />
             <Footer />
-        </div>
+        </>
     );
 };
 

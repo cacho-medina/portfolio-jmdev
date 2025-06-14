@@ -51,8 +51,8 @@ const HeroSection = () => {
                                 : "opacity-0 transform -translate-y-8"
                         }`}
                     >
-                        Fullstack Web Developer — I build fast, scalable and
-                        creative web solutions.
+                        Fullstack Developer — I build fast, scalable and
+                        creative solutions.
                     </p>
 
                     {/* CTA Buttons */}

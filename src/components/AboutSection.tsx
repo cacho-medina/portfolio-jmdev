@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { SVGdraw } from "./custom/SVGdraw";
 
 const AboutSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ const AboutSection = () => {
                         style={{ animationDelay: "400ms" }}
                     >
                         <h2 className="font-radio text-3xl md:text-4xl font-bold mb-6 text-gradient tracking-tight">
-                            About Me
+                            <SVGdraw>About Me</SVGdraw>
                         </h2>
 
                         <div className="space-y-4 text-white/80">
