@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Code2, Github } from "lucide-react";
 
 export type ProjectProps = {
     title: string;
@@ -82,13 +82,15 @@ const ProjectCard = ({
                     {demoUrl && (
                         <Button
                             size="sm"
-                            className="glass-morph bg-primary/10 hover:bg-primary/20 border-primary/20 hover:border-primary/40"
+                            className="glass-morph bg-special-red/10 hover:bg-special-red/20 border-special-red/20 hover:border-special-red/40"
                         >
                             <a
                                 href={demoUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="flex items-center text-white"
                             >
+                                <Code2 className="mr-1 h-4 w-4" />
                                 Demo
                             </a>
                         </Button>

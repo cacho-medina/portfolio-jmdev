@@ -19,24 +19,24 @@ const Navbar = () => {
 
     const navItems = [
         {
-            name: "Inicio",
-            href: "/#inicio",
+            name: "Home",
+            href: "/#home",
         },
         {
-            name: "Proyectos",
-            href: "/#proyectos",
+            name: "Projects",
+            href: "/#projects",
         },
         {
-            name: "Nosotros",
-            href: "/#nosotros",
+            name: "About",
+            href: "/#about",
         },
         {
-            name: "Servicios",
-            href: "/#servicios",
+            name: "Skills",
+            href: "/#skills",
         },
         {
-            name: "Testimonios",
-            href: "/#testimonios",
+            name: "Experience",
+            href: "/#experience",
         },
     ];
 
@@ -66,13 +66,15 @@ const Navbar = () => {
                                 </NavigationLink>
                             ))}
                         </div>
-                        <Button
-                            size="sm"
-                            className="glass-morph rounded-full flex items-center gap-2 group hover:glow-effect hover:bg-special-red text-white transition-all duration-300"
-                        >
-                            Contactanos
-                            <ArrowRightCircle className="w-4 h-4 group-hover:-rotate-45 transition-all duration-300" />
-                        </Button>
+                        <a href="/#contact">
+                            <Button
+                                size="sm"
+                                className="glass-morph rounded-full flex items-center gap-2 group hover:glow-effect hover:bg-special-red text-white transition-all duration-300"
+                            >
+                                Contact
+                                <ArrowRightCircle className="w-4 h-4 group-hover:-rotate-45 transition-all duration-300" />
+                            </Button>
+                        </a>
                     </div>
 
                     <div className="md:hidden flex items-center justify-between gap-2 w-full">
@@ -99,16 +101,18 @@ const Navbar = () => {
                                             {item.name}
                                         </NavLink>
                                     ))}
-                                    <Button
-                                        onClick={() => {
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        size="sm"
-                                        className="bg-special-red rounded-full text-white flex items-center gap-2 group hover:bg-special-red/50 transition-all duration-300"
-                                    >
-                                        Contactanos
-                                        <ArrowRightCircle className="w-4 h-4 group-hover:-rotate-45 transition-all duration-300" />
-                                    </Button>
+                                    <a href="/#contact">
+                                        <Button
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                            }}
+                                            size="sm"
+                                            className="bg-special-red rounded-full text-white flex items-center gap-2 group hover:bg-special-red/50 transition-all duration-300"
+                                        >
+                                            Contact
+                                            <ArrowRightCircle className="w-4 h-4 group-hover:-rotate-45 transition-all duration-300" />
+                                        </Button>
+                                    </a>
                                 </div>
                             </SheetContent>
                         </Sheet>

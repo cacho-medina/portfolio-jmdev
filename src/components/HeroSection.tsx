@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import LetterGlitch from "./background/LetterGlitch/LetterGlitch";
 
 const HeroSection = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -15,8 +16,17 @@ const HeroSection = () => {
             className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
         >
             {/* Background glow effects */}
-            <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-special-red/10 rounded-full filter blur-[100px]" />
-            <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-special-red/10 rounded-full filter blur-[100px]" />
+            {/* <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-special-red/10 rounded-full filter blur-[100px]" />
+            <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-special-red/10 rounded-full filter blur-[100px]" /> */}
+            <div className="absolute top-0 left-0 w-full h-full filter-dark">
+                <LetterGlitch
+                    glitchColors={["#4f0d14", "#35090d", "#450c11"]}
+                    glitchSpeed={50}
+                    centerVignette={false}
+                    outerVignette={true}
+                    smooth={true}
+                />
+            </div>
 
             <div className="container px-4 md:px-6 relative z-10">
                 <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
