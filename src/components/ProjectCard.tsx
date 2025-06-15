@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Code2, Github } from "lucide-react";
+import { Github, Link } from "lucide-react";
 
 export type ProjectProps = {
     title: string;
@@ -23,24 +23,24 @@ const ProjectCard = ({
 
     return (
         <div
-            className="relative group overflow-hidden rounded-xl glass-morph transition-all duration-500 hover:glow-effect"
+            className="relative group overflow-hidden rounded-xl glass-morph transition-all duration-500 hover:glow-effect h-[450px]"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {/* Project background image */}
-            <div className="relative h-60 overflow-hidden">
+            {/* Project background image with overlay */}
+            <div className="absolute inset-0 z-0">
                 <img
                     src={image}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/80 to-transparent" />
             </div>
 
             {/* Project content */}
-            <div className="p-6">
+            <div className="relative z-10 flex flex-col justify-end h-full p-6">
                 {/* Project title */}
-                <h3 className="font-radio text-xl font-bold mb-3 text-gradient">
+                <h3 className="font-radio text-2xl font-bold mb-3 text-white">
                     {title}
                 </h3>
 
@@ -52,7 +52,7 @@ const ProjectCard = ({
                     {tech.map((item, index) => (
                         <span
                             key={index}
-                            className="px-2 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-white/60"
+                            className="px-2 py-1 text-xs rounded-full bg-white/10 border border-white/20 text-white/80"
                         >
                             {item}
                         </span>
@@ -65,7 +65,7 @@ const ProjectCard = ({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="glass-morph border-white/10 hover:border-white/20"
+                            className="glass-morph border-white/20 hover:border-white/40"
                         >
                             <a
                                 href={githubUrl}
@@ -82,7 +82,7 @@ const ProjectCard = ({
                     {demoUrl && (
                         <Button
                             size="sm"
-                            className="glass-morph bg-special-red/10 hover:bg-special-red/20 border-special-red/20 hover:border-special-red/40"
+                            className="glass-morph bg-special-red/20 hover:bg-special-red/30 border-special-red/30 hover:border-special-red/50"
                         >
                             <a
                                 href={demoUrl}
@@ -90,7 +90,7 @@ const ProjectCard = ({
                                 rel="noopener noreferrer"
                                 className="flex items-center text-white"
                             >
-                                <Code2 className="mr-1 h-4 w-4" />
+                                <Link className="mr-1 h-4 w-4" />
                                 Demo
                             </a>
                         </Button>
@@ -98,14 +98,19 @@ const ProjectCard = ({
                 </div>
             </div>
 
+            {/* Glow borders */}
+            <div
+                className={`absolute inset-0 border border-special-red/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+            />
+
             {/* Glow corners */}
             <div
-                className={`absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-special-red rounded-tl-xl transition-opacity duration-500 ${
+                className={`absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-special-red rounded-tl-xl transition-opacity duration-500 ${
                     isHovered ? "opacity-100" : "opacity-0"
                 }`}
             />
             <div
-                className={`absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-special-red rounded-br-xl transition-opacity duration-500 ${
+                className={`absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-special-red rounded-br-xl transition-opacity duration-500 ${
                     isHovered ? "opacity-100" : "opacity-0"
                 }`}
             />

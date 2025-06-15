@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
 
                     {/* Navigation */}
-                    <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
+                    <div className="hidden md:flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8">
                         <FooterLink href="#home">Home</FooterLink>
                         <FooterLink href="#about">About</FooterLink>
                         <FooterLink href="#projects">Projects</FooterLink>
@@ -41,7 +41,7 @@ const Footer = () => {
 
                     {/* Copyright */}
                     <div className="text-sm text-white/60">
-                        <p>
+                        <p className="text-center">
                             © {currentYear} Joaquín Medina. All rights reserved.
                         </p>
                     </div>

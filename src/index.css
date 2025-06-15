@@ -51,6 +51,9 @@
         --animate-marquee-vertical: marquee-vertical var(--duration) linear
             infinite;
     } */
+    .theme {
+        --animate-line-shadow: line-shadow 15s linear infinite;
+    }
 }
 
 @layer base {
@@ -79,8 +82,11 @@
         @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-lg;
     }
 
-    .glow-effect {
+    .glow-effect-blue {
         box-shadow: 0 0 15px 2px rgba(137, 180, 250, 0.1);
+    }
+    .glow-effect {
+        box-shadow: 0 0 15px 2px rgba(239, 35, 60, 0.1);
     }
 
     .text-gradient {
@@ -131,6 +137,14 @@
         }
         to {
             transform: translateY(calc(-100% - var(--gap)));
+        }
+    }
+    @keyframes line-shadow {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 100% -100%;
         }
     }
 }

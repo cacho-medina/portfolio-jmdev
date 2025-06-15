@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { SVGdraw } from "./custom/SVGdraw";
+import { SpinningText } from "./magicui/spinning-text";
 
 const AboutSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,6 +41,16 @@ const AboutSection = () => {
                         style={{ animationDelay: "200ms" }}
                     >
                         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-special-red/20 to-transparent animate-float" />
+                        <div className="hidden md:block relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <SpinningText radius={13} className="font-semibold">
+                                Joaquin * Medina * dev *
+                            </SpinningText>
+                        </div>
+                        <div className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <SpinningText radius={10} className="font-semibold">
+                                Joaquin * Medina * dev *
+                            </SpinningText>
+                        </div>
                         <div className="absolute inset-2 rounded-full glass-morph glow-effect overflow-hidden">
                             <img
                                 src="/images/profesional.png"
@@ -56,7 +66,7 @@ const AboutSection = () => {
                         style={{ animationDelay: "400ms" }}
                     >
                         <h2 className="font-radio text-3xl md:text-4xl font-bold mb-6 text-gradient tracking-tight">
-                            <SVGdraw>About Me</SVGdraw>
+                            About Me
                         </h2>
 
                         <div className="space-y-4 text-white/80">

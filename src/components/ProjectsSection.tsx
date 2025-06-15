@@ -1,17 +1,28 @@
 import { useEffect, useRef } from "react";
 import ProjectCard, { ProjectProps } from "./ProjectCard";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 const projectsData: ProjectProps[] = [
     {
-        title: "LuxBuy E-commerce",
+        title: "LuxShop E-commerce",
         description:
             "A fully responsive e-commerce platform with cart functionality, payment processing, and admin dashboard.",
-        tech: ["React", "Node.js", "MongoDB", "Stripe"],
+        tech: ["React", "NestJs", "MercadoPago", "Prisma", "PostgreSQL"],
         image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        demoUrl: "https://demo-ecommerce.com",
+        demoUrl: "https://luxshoptuc.vercel.app",
         githubUrl: "https://github.com/joaquinmedina",
     },
     {
+        title: "Rolling Hotel",
+        description:
+            "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "Mongoose"],
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        demoUrl: "https://rolling-hotel.vercel.app",
+        githubUrl: "https://github.com/joaquinmedina",
+    },
+    /* {
         title: "Travel Discovery App",
         description:
             "Interactive travel app that helps users discover destinations based on preferences and budget constraints.",
@@ -28,33 +39,24 @@ const projectsData: ProjectProps[] = [
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
         demoUrl: "https://ai-tasks.demo.com",
         githubUrl: "https://github.com/joaquinmedina",
-    },
-    {
-        title: "Rolling Hotel",
-        description:
-            "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
-        tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        demoUrl: "https://social-metrics.demo.com",
-        githubUrl: "https://github.com/joaquinmedina",
-    },
+    }, */
     {
         title: "Management System",
         description:
             "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
         tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        demoUrl: "https://social-metrics.demo.com",
-        githubUrl: "https://github.com/joaquinmedina",
+        demoUrl: "",
+        githubUrl: "",
     },
     {
         title: "Koi ERP",
         description:
             "Analytics dashboard that tracks performance across multiple social media platforms in one interface.",
-        tech: ["Vue.js", "Firebase", "Chart.js", "Vuetify"],
+        tech: ["Next.js", "TailwindCSS", "Supabase", "Shadcn/UI", "TypeScript"],
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        demoUrl: "https://social-metrics.demo.com",
-        githubUrl: "https://github.com/joaquinmedina",
+        demoUrl: "",
+        githubUrl: "",
     },
 ];
 
@@ -97,7 +99,7 @@ const ProjectsSection = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 md:px-20">
                     {projectsData.map((project, index) => (
                         <div
                             key={index}
@@ -107,6 +109,12 @@ const ProjectsSection = () => {
                             <ProjectCard {...project} />
                         </div>
                     ))}
+                </div>
+                <div className="flex justify-center mt-12">
+                    <Button className="glass-morph rounded-full flex items-center gap-2 group hover:glow-effect hover:bg-special-red text-white transition-all duration-300">
+                        View All Projects
+                        <ArrowRight className="w-4 h-4 group-hover:-rotate-45 transition-all duration-300" />
+                    </Button>
                 </div>
             </div>
         </section>
